@@ -63,6 +63,14 @@ body {
 .table-content tr,
 .table-head tr {
   width: 100%;
+  position: relative;
+}
+
+tr th {
+  position: sticky;
+  top: 0;
+  background-color: rgb(51, 47, 47);
+  z-index: 2;
 }
 
 .table-content tr:hover,

@@ -66,15 +66,11 @@ pageBlock.addEventListener("click", (e) => {
       return;
     }
     if (e.target.innerText === "First") {
-      renderContent(0, parseInt(inputPage.value), parseInt(e.target.value));
+      renderContent(0, parseInt(inputPage.value));
       return;
     }
     if (e.target.innerText === "Last") {
-      renderContent(
-        data.length - parseInt(inputPage.value),
-        data.length,
-        parseInt(e.target.value)
-      );
+      renderContent(data.length - parseInt(inputPage.value), data.length);
       return;
     }
 
