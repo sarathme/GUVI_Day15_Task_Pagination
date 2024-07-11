@@ -109,3 +109,16 @@ body {
 .btn-active {
   background-color: rgb(27, 65, 31);
 }
+
+@media screen and (max-width: 720px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .container {
+    width: 100%;
+    padding: 1px;
+  }
+}
