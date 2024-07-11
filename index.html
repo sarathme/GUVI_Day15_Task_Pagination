@@ -8,21 +8,23 @@
   </head>
   <body>
     <div class="container">
-      <h1>Pagination</h1>
+      <h1 id="title">Pagination</h1>
+      <p id="description">Implementing pagination in tables</p>
       <div class="page-input">
         <label for="page-group">Contents per page</label>
         <input type="number" value="10" id="page-group" min="10" />
       </div>
-      <table class="table">
-        <thead class="table-head">
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody class="table-content" id="table-body">
-          <!-- <tr>
+      <div class="table-responsive">
+        <table type="table" class="table table-bordered">
+          <thead class="table-head">
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody class="table-content" id="table-body">
+            <!-- <tr>
             <td>1</td>
             <td>Lura Senger</td>
             <td>Xander_Collier@yahoo.com</td>
@@ -42,15 +44,15 @@
             <td>Lura Senger</td>
             <td>Xander_Collier@yahoo.com</td>
           </tr> -->
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
       <div class="pagination" id="pagination">
-        <!-- <button class="page">11236</button>
-        <button class="page">1</button>
-        <button class="page">1</button>
-        <button class="page">1</button> -->
+        <button class="page">Previous</button>
+        <button class="page">Next</button>
       </div>
     </div>
     <script type="module" src="./script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
   </body>
 </html>

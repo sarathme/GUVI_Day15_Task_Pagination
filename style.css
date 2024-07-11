@@ -46,7 +46,12 @@ body {
 .page-input input:focus-visible {
   outline: 4px solid rgb(31, 195, 47);
 }
+.table-responsive {
+  overflow: scroll;
+  min-height: 100%;
+}
 .table {
+  width: 100%;
   flex: 1 0 auto;
   color: #f7f7f7;
 }
@@ -75,7 +80,7 @@ body {
 .table-content tr td,
 .table-head tr th {
   /* background-color: blue; */
-  max-width: 10px;
+  width: auto;
   max-height: 20px;
   padding: 10px;
 }
@@ -90,13 +95,14 @@ body {
 }
 
 .page {
-  width: 30px;
-  height: 30px;
-  padding: 3px 1px;
+  min-width: 30px;
+  height: auto;
+  padding: 10px;
   border: none;
   background-color: rgb(83, 82, 82);
   cursor: pointer;
   color: #fefdfd;
+  border-radius: 20px;
 }
 
 .page:hover,
