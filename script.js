@@ -9,17 +9,17 @@ inputPage.max = data.length / 2;
 let totalPage = data.length / inputPage.value;
 
 createPageButton(totalPage);
-renderContent(0, parseInt(inputPage.value));
+renderContent(0, parseInt(inputPage.value), 0);
 
 inputPage.onchange = (e) => {
   const contentPerPage = parseInt(e.target.value);
   totalPage = Math.ceil(data.length / contentPerPage);
 
   createPageButton(totalPage);
-  renderContent(0, contentPerPage);
+  renderContent(0, contentPerPage, 0);
 };
 
-function renderContent(start, end) {
+function renderContent(start, end, active) {
   const displayContent = data.slice(start, end);
   console.log(displayContent);
   tableBody.innerHTML = "";
@@ -31,6 +31,10 @@ function renderContent(start, end) {
   </tr>`;
     tableBody.insertAdjacentHTML("beforeend", innerHTML);
   });
+
+  pageBlock.childNodes.forEach((el) => el.classList.remove("btn-active"));
+
+  pageBlock.children[active].classList.add("btn-active");
 }
 
 function createPageButton(pages) {
@@ -54,6 +58,7 @@ pageBlock.addEventListener("click", (e) => {
         : start + parseInt(inputPage.value);
     console.log(start);
     console.log(end);
-    renderContent(start, end);
+    console.log(parseInt(e.target.value) - 1);
+    renderContent(start, end, parseInt(e.target.value) - 1);
   }
 });

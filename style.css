@@ -4,33 +4,79 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: sans-serif;
+}
+body {
+  background-color: #c0c0c0;
+}
 .container {
   width: 80%;
+  text-align: center;
   max-height: 100dvh;
+  padding: 20px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  color: rgb(27, 65, 31);
 
   gap: 10px;
 }
 
+.page-input {
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(27, 65, 31);
+}
+
+.page-input input {
+  width: 80px;
+  height: 40px;
+  padding: 10px;
+  background-color: rgb(89, 115, 92);
+  border: none;
+  border-radius: 40px;
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: center;
+  margin-left: 4px;
+}
+.page-input input:focus-visible {
+  outline: 4px solid rgb(31, 195, 47);
+}
 .table {
   flex: 1 0 auto;
-  overflow: scroll;
+  color: #f7f7f7;
 }
 
 .table-content {
-  background-color: yellow;
+  background-color: rgb(83, 82, 82);
   text-align: center;
 }
 .table-content tr,
 .table-head tr {
   width: 100%;
-  height: 20%;
 }
+
+.table-content tr:hover,
+.table-content tr:nth-child(odd):hover {
+  background-color: rgb(27, 65, 31);
+}
+.table-head tr {
+  background-color: #312626;
+}
+
+.table-content tr:nth-child(odd) {
+  background-color: rgb(130, 128, 128);
+}
+
 .table-content tr td,
 .table-head tr th {
-  background-color: blue;
+  /* background-color: blue; */
+  max-width: 10px;
+  max-height: 20px;
   padding: 10px;
 }
 
@@ -44,8 +90,16 @@
 }
 
 .page {
-  min-width: 30px;
-  padding: 4px;
-  outline: none;
+  width: 30px;
+  height: 30px;
+  padding: 3px 1px;
+  border: none;
+  background-color: rgb(83, 82, 82);
   cursor: pointer;
+  color: #fefdfd;
+}
+
+.page:hover,
+.btn-active {
+  background-color: rgb(27, 65, 31);
 }
