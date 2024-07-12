@@ -113,6 +113,12 @@ tr th {
   border-radius: 20px;
 }
 
+.page:disabled {
+  cursor: not-allowed;
+  background-color: rgb(33, 49, 36);
+  opacity: 50%;
+}
+
 .page:hover,
 .btn-active {
   background-color: rgb(27, 65, 31);
